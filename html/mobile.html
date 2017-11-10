@@ -10,16 +10,100 @@
     <link rel="stylesheet" href="http://eventimg.auction.co.kr/md/auction/0868D4BD4A/swiper.min.css">
 	<!-- Custom CSS -->
 	<style type="text/css">
-		
+        .rel{position: relative; width:100%;}
+        .msg{display: none;}
+        .btn_on{display: none;}
+        #p_wrapper{min-width: 320px;}
+        #p_header{position: relative; width:100%; }        
+        #p_header #p_share{top:2%; z-index: 20} 
+        #p_header .copy_area{position: absolute; z-index: 10}
+        #p_header .imgInfinitePlay{width:100%;position: absolute;left:0;bottom:0;height: 15%;}
+        #p_header .imgInfinitePlay ul{width: 100%;position: relative;height:100%;}
+        #p_header .imgInfinitePlay ul li{position: absolute;bottom: 0;left: 0;width: 100%}
+        
+        #p_navi{background:#9f000a;}
+        #p_navi .p_navi_cnt{background:#9f000a;}
+        #p_navi .p_navi_cnt ul li{width: 25%;}    
+        
+        #p_main{position: relative}
+        #p_main iframe{position: absolute;top:0;left:0;width:100%;height:100%;z-index: 10}
+        
+        #p_sec0{margin:0 auto;position:relative}
+        #p_sec0 img{width:100%}		
+        #p_sec0 .swiper-container {overflow:hidden;position:relative}				
+        #p_sec0 .swiper-pagination{width:100%;text-align:center;position:absolute;left:0;bottom:5%}
+        #p_sec0 .swiper-pagination-bullet{width:6px;height:6px;margin:0 5px;background:#fff;border:2px #fff solid;border-radius:100%;opacity:0.2}        
+        #p_sec0 .swiper-pagination-bullet-active{border:2px #fff solid;opacity:1;background:#fff;/*animation: yoyo 0.8s infinite;*/}
+        #p_sec0 .swiper-button-prev{display:none; opacity:0.3;width:40px;height:40px;z-index:10;top:50%;background-color:#fff;background-size:30px 20px;margin-top:-20px;left:0}
+        #p_sec0 .swiper-button-next{display:none; opacity:0.3;width:40px;height:40px;z-index:10;top:50%;background-color:#fff;background-size:30px 20px;margin-top:-20px;right:0}
+        
+        @keyframes example {
+            0%   {border:2px #fff solid; width:6px; height:6px;}           
+            50%  {border:5px #fff solid; width:10px; height:10px;margin-bottom:-4px;}
+            100% {border:2px #fff solid; width:6px; height:6px;}
+        }
+        @keyframes pound {
+            from { transform: none; }
+            50% { transform: scale(1.4); }
+            to { transform: none; }
+        }
+        @keyframes yoyo {
+            from { margin-bottom:0px; }
+            50%  { margin-bottom:2px; }
+            to   { margin-bottom:0px; }
+        }
+        .ico_slide {position: absolute;left: 0;width: 100%;bottom: 0;z-index: 10;}
+        .today_pick{background-color: #f1f1f1}
+        
+        .notice_box a{display: block; position: relative; width:100%;}
+        .notice_box .arrow{position:absolute;width:3.5000%;left:65%;top:50%;animation:bounce .3s linear infinite alternate;}
+        @keyframes bounce {
+            from {bottom:0}
+            to {margin-top:-3px;}
+        }
+        #coupon_btn{position: absolute; left:0%; top:75%; width:100%;}
 	</style>
 	<!-- jQuery -->
 	<script type="text/javascript" src="http://script.auction.co.kr/common/jquery.js"></script>
     <script src="http://eventimg.auction.co.kr/md/auction/0868D4BD4A/swiper.min.js"></script>
 	<!-- Common Promotion Script -->
 	<script src="http://eventimg.auction.co.kr/md/auction/08405BF42E/promotion.iac.js"></script>
+    <script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/04D25F0304/jquery.easing-1.3.min.js"></script>
 	<!-- Custom Script -->
 	<script type="text/javascript">
-		
+        $(document).ready(function () {
+            var iacNavigation = new iacFixedNavigation("#p_navi",{
+                platform : "mobile",
+                navButtonOver : true,
+                navImgOverType : "swap"
+            });
+        });
+        
+        function showMv(){
+            $("#p_main .inner").append('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/7UmE4WcVZb0?wmode=transparent&rel=0&showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>')
+        };
+        
+        
+        /*리미티드 에디션 영역 제거 함수*/
+        function special_hide(){
+            $("#prd01").css("display" , "none")
+        }
+        
+        function notice_on(_mc){
+            $(_mc).find(".btn_off").css("display" ,"none")
+            $(_mc).find(".arrow").css("display" ,"none")
+            $(_mc).find(".btn_on").css("display" ,"block")
+            //$(_mc).find(".msg").css("display" ,"block")
+            $(_mc).find(".msg").slideDown(300,'easeInOutQuad',function(){});
+        }
+
+        function notice_off(_mc){
+            $(_mc).find(".btn_off").css("display" ,"block")
+            $(_mc).find(".arrow").css("display" ,"block")
+            $(_mc).find(".btn_on").css("display" ,"none")
+            //$(_mc).find(".msg").css("display" ,"none")
+            $(_mc).find(".msg").slideUp(400,'easeInOutQuad',function(){});
+        }
 	</script>
 </head>
 <body>
@@ -28,17 +112,149 @@
 		<div id="dimmed"></div>
 	</div>
 
-	<main role="main" id="p_wrapper">
-		<header id="p_header">
-			<!-- Header Area -->
-		</header>
-		<section id="p_contents">
-			<!-- Contents Area -->
-		</section>
-		<footer id="p_footer">
-			<!-- Footer Area -->
-		</footer>
-	</main>
-
+	<div role="main" id="p_wrapper">
+		<div id="p_header">
+            <div class="copy_area">
+                <img src="images/m_top_copy.png" alt="">
+            </div>   
+           
+            <img src="images/m_top_img.jpg" alt="">
+            <div id="p_share">                
+                <iframe id="dev_sns" src="about:blank" width="100%" height="350"  scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+            </div>
+        </div>
+        <!--navi-->
+        <nav id="p_navi">
+            <div class="p_navi_area">
+                <div class="p_navi_cnt">
+                    <ul>
+                        <li><a href="#p_sec1"></a></li>
+                        <li><a href="#p_sec2"></a></li>
+                        <li><a href="#p_sec3"></a></li>
+                        <li><a href="#p_sec4"></a></li>
+                    </ul>
+                    <img src="images/m_navi1.gif" alt="" class="img_nav">
+                </div>
+            </div>
+        </nav>
+        <div id="p_contents">
+            
+            <div id="p_sec0" class="rel">
+                <!--영상-->               
+                <!--<div id="p_main">
+                    <div class="inner">
+                        <a href="javascript:showMv();"><img src="http://eventimg.auction.co.kr/md/auction/09AC91DA4E/m_mv_cover.jpg" alt=""></a>
+                    </div>              
+                </div>-->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/m_top_roll_01.jpg"></div>
+                        <div class="swiper-slide"><img src="images/m_top_roll_02.jpg"></div>
+                        <div class="swiper-slide"><img src="images/m_top_roll_03.jpg"></div>
+                        <div class="swiper-slide"><img src="images/m_top_roll_04.jpg"></div>
+                        <div class="swiper-slide"><img src="images/m_top_roll_05.jpg"></div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-black"></div>
+                    <div class="swiper-button-prev swiper-button-black"></div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>				
+                </div>
+                
+            </div>
+            <!--한정특가 -->
+            <div id="p_sec1" class="rel">               
+                <h3><img src="images/m_title_01.jpg" alt="한정특가"></h3>
+                <!--리미티드에디션 한정판매후 영역제거-->
+                <iframe id="prd01" src="about:blank"  width="100%"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                <!--옥션단독스페셜 PRICE-->
+                <iframe id="prd02" src="about:blank"  width="100%"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                
+                <div class="today_pick rel">
+                    <img src="images/m_today_pick_tit.gif" alt="추천 TODAY'S PICK">
+                    <!--추천 TODAY'S PICK-->
+                    <iframe id="prd03" src="about:blank"  width="100%"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                </div>
+            </div>
+            <!-- //한정특가 -->
+            
+            <!--특급혜택 -->
+            <div id="p_sec2" class="rel">
+                <h3><img src="images/m_title_02.jpg" alt="특급혜택"></h3>
+                <img src="images/m_exp_benefit_img.jpg" alt="아이메이크업 제품1만원 이상 구매하면 누구나 폼클렌징 100% 증정">
+                
+                
+                <div class="notice_box">
+                    <a href="javascript:notice_on('.notice_box')">
+                        <span class="arrow"><img src="images/m_btn_arr_down.png" alt=""></span>
+                        <img class="btn_off" src="images/m_exp_benefit_notice_off.gif">
+                    </a>
+                    <a href="javascript:notice_off('.notice_box')"><img class="btn_on" src="images/m_exp_benefit_notice_on.gif"></a>
+                    <p class="msg"><img  src="images/m_exp_benefit_notice_img.gif"></p>
+                </div>
+            </div>
+            <!-- //특급혜택 -->
+            
+            <!-- 할인쿠폰 -->
+            <div id="p_sec3" class="rel">
+                <h3><img src="images/m_title_03.jpg" alt="할인쿠폰"></h3>
+                <div class="rel">
+                   <iframe id="coupon_btn" src="about:blank"  width="100%"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    <img src="images/m_coupon_img.jpg" alt="">
+                </div>
+                <img src="images/m_coupon_notice_img.jpg" alt="">
+            </div>
+            <!-- //할인쿠폰 -->
+            
+            <!-- 맞춤특가 -->
+            <div id="p_sec3-1" class="rel">
+                <h3><img src="images1/m_title_04.jpg" alt="맞춤특가"></h3>
+                <!--맞춤특가-->
+                <iframe id="prd04" src="about:blank"  width="100%"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+            </div>
+            <!-- //맞춤특가 -->
+            
+            
+            <!-- 체험특가 -->
+            <div id="p_sec4" class="rel">                
+                <h3><img src="images/m_title_05.jpg" alt="체험특가"></h3>
+                <div style="height:500px; width:100%; background-color: red;">
+                    
+                </div>
+                
+            </div>
+            <!-- //체험특가 -->
+        </div>
+        <div id="p_footer">
+            <img src="images/m_promotion_after_banner.jpg" alt="차주 예고">
+        </div>
+    </div>
+    <script>
+        /*sns*/
+        $("#dev_sns").attr("src" , "dev/m0_sns.html")
+        /*리미티드에디션*/
+        $("#prd01").attr("src" , "dev/m1_goods_rolling.html")
+        /*옥션단독스페셜 PRICE*/
+        $("#prd02").attr("src" , "dev/m2_goods.html")
+        /*추천 TODAY'S PICK*/
+        $("#prd03").attr("src" , "dev/m3_goods.html")
+        /*쿠폰*/
+        $("#coupon_btn").attr("src" , "dev/m4_coupon.html")
+        /*맞춤특가*/
+        $("#prd04").attr("src" , "dev/m5_goods.html")
+        
+        var mySwiper = new Swiper('#p_sec0 .swiper-container', {				
+           /* autoplay : false,
+            nextButton: '#p_sec0 .swiper-button-next',
+            prevButton: '#p_sec0 .swiper-button-prev',
+            pagination: '#p_sec0 .swiper-pagination',*/
+            freeMode : true,
+            paginationClickable: true,
+            loop: true,
+            autoHeight: true,
+            spaceBetween: 0
+        });	
+    
+    </script>
 </body>
 </html>

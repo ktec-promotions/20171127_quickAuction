@@ -1,0 +1,103 @@
+#goods_c1_list{width:100%; max-width:640px; margin:0 auto; padding:8px 8px 0; box-sizing:border-box;overflow:hidden;}
+#goods_c1_list div.goods_area, #goods_c1_list ul.goods_area li{
+    width:100%;
+    margin-bottom:8px;
+}
+#goods_c1_list .goods_area .goods_info{left:3%; width:20%;}
+#goods_c1_list .goods_area .goods_info .goods_sale{padding:0%; line-height:normal;}
+
+
+#goods_c1_list .goods_area .goods_cnt{margin-top: 7%; position:relative; height:278px;  text-align: center;  vertical-align: middle; font-size:2em; }
+#goods_c1_list .goods_area .goods_cnt .btns{position: relative; width:100%;margin-top:0.2em; display: block}
+#goods_c1_list .goods_area .goods_cnt .btns img{position: relative; width:240px;}
+
+#goods_c1_list .goods_area .goods_cnt .goods_name{ padding-bottom: 0%; width:100%;text-align:center; line-height:0.45em; color:#454545; font-size:1.6em;overflow:hidden; word-break:break-all; white-space:nowrap;/* text-overflow:ellipsis;*/ letter-spacing:-0.5px;}
+#goods_c1_list .goods_area .goods_cnt .goods_name strong{color:#454545; font-weight:bold; font-size:0.5em;  overflow:hidden; word-break:break-all; white-space:nowrap; text-overflow:ellipsis;}
+
+#goods_c1_list .goods_area .goods_cnt .goods_price{padding-top:8%; width:73%;position:relative;text-align:center; letter-spacing:-0.5px; margin: 0 auto;}
+#goods_c1_list .goods_area .goods_cnt .goods_price .list_price{ color:#171717; font-size:0.85em;text-align: right;}            
+#goods_c1_list .goods_area .goods_cnt .goods_price .list_price div{float: left;}            
+#goods_c1_list .goods_area .goods_cnt .goods_price .list_price .p_tit{position: relative; width:50%; color:#171717; font-size:0.80em;text-align: left !important; letter-spacing: -2px}
+#goods_c1_list .goods_area .goods_cnt .goods_price .list_price .p_price{position: relative; width:50%;  color:#171717; font-size:0.80em;text-align: right !important;}
+#goods_c1_list .goods_area .goods_cnt .goods_price .list_price .p_price del{position: relative; width:50%;  color:#171717; font-size:1em !important;text-align: right !important;font-weight:bold !important}
+
+#goods_c1_list .goods_area .goods_cnt .goods_price .deal_price{  padding-top:0px; position: relative; width: 100%; color:#ed4e53; display: inline-block !important; line-height:0.85em; font-size:0.8em;text-align: right; }
+#goods_c1_list .goods_area .goods_cnt .goods_price .deal_price div{float: left;}       
+#goods_c1_list .goods_area .goods_cnt .goods_price .deal_price .p_tit{ position: relative; width: 50%; color:#ed4e53;   font-size:0.85em;text-align: left;letter-spacing: -2px}
+#goods_c1_list .goods_area .goods_cnt .goods_price .deal_price .p_price{padding-top:0px; position: relative; width: 50%; color:#ed4e53;  font-size:0.85em;text-align: right}
+#goods_c1_list .goods_area .goods_cnt .goods_price .deal_price .p_price strong{ position: relative; width: 50%; color:#ed4e53;  font-weight:bold !important;font-size:1.1em !important;text-align: right}
+
+
+.inner{overflow: hidden}
+.inner li{float: left; width:50% !important; list-style: none; box-shadow: none !important;margin:0 !important}
+
+
+@media all and (min-width:1px){
+    #goods_c1_list .goods_area .goods_cnt{ font-size:1em ; height:130px;margin-top: 7%;}
+    #goods_c1_list .goods_area .goods_cnt .btns img{position: relative; width:130px;}
+}
+/*아이폰5*/
+@media all and (min-width:319px){
+    #goods_c1_list .goods_area .goods_cnt{ font-size:1em ; height:130px;margin-top: 10%;}
+    #goods_c1_list .goods_area .goods_cnt .btns img{position: relative; width:130px;}
+}
+/*갤럭시 표즌*/
+@media all and (min-width:360px) {
+    #goods_c1_list .goods_area .goods_cnt{ font-size:1em ; height:140px;margin-top: 18%;}
+    #goods_c1_list .goods_area .goods_cnt .btns img{position: relative; width:130px;}
+    #goods_c1_list .goods_area .goods_cnt .goods_price{padding-top:11%;}
+}
+/*아이폰6*/
+@media all and (min-width:375px)  {
+    #goods_c1_list .goods_area .goods_cnt{ font-size:1.2em ; height:151px;margin-top: 13%;}
+    #goods_c1_list .goods_area .goods_cnt .btns img{position: relative; width:145px;}
+}
+/*아이폰6s*/
+@media all and (min-width:414px){
+    #goods_c1_list .goods_area .goods_cnt{ font-size:1.3em ; height:151px;margin-top: 12%;}
+    #goods_c1_list .goods_area .goods_cnt .btns img{position: relative; width:145px;}
+}
+/*갤 노트*/
+@media all and (min-width:479px){
+    #goods_c1_list .goods_area .goods_cnt{ font-size:1.6em ; height:192px;margin-top: 14%;}
+    #goods_c1_list .goods_area .goods_cnt .btns img{position: relative; width:185px;}
+}
+
+@media all and (min-width:639px){
+    #goods_c1_list .goods_area .goods_cnt{ font-size:2.0em ; height:240px;margin-top: 12%;}
+    #goods_c1_list .goods_area .goods_cnt .btns img{position: relative; width:240px;}
+    #goods_c1_list .goods_area .goods_cnt .goods_price {
+        padding-top: 14%;
+    }
+}
+
+
+
+.mImg{width:100%; vertical-align: top; border: 0;}    
+.btnCase{position: relative; display: block; padding:3% 0 5% 0; }
+#goods_c1_black_list ul.goods_area li {
+    width: 100%;
+    margin-bottom: 8px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    overflow: hidden;
+    border:1px solid #dfdfe1 !important;
+}
+
+#goods_c1_black_list .goods_area .goods_cnt .goods_name {
+    width: 95%;
+    line-height: 28px;
+    height: 60px !important;
+    color: #666666 !important;
+    font-size: 18px !important;
+    overflow: hidden !important;
+    word-break: break-all !important;
+    white-space: normal !important;
+    text-overflow: ellipsis !important;
+    letter-spacing: -0.5px !important;
+    text-align: center !important;
+}

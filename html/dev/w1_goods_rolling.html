@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>옥션 - 모바일 쇼핑은 옥션</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="http://eventimg.auction.co.kr/md/auction/08405BF42E/idangerous.swiper.css">
+	<link rel="stylesheet" type="text/css" href="http://eventimg.auction.co.kr/md/auction/0973EFE7D0/goods.css" />	
+	<style>
+		#goods_slide_c1_list{width: 978px;border:1px solid #dfdfe1;position: relative; background-color: #fff}		
+		#goods_slide_c1_list .swiper-pagination{position: relative;bottom:auto;width: 100%;padding-top:30px}
+        #goods_slide_c1_list .swiper-pagination span{width:8px;height:8px;display:inline-block;border:2px solid #bababa;background: #bababa;margin:0 9px;}
+        #goods_slide_c1_list .swiper-pagination .swiper-active-switch{background: #1b1b1b; border:2px solid #1b1b1b;}
+		#goods_slide_c1_list .cnt{text-align: center;position: relative;padding-bottom:40px}
+		#goods_slide_c1_list .cnt .ico_soldout{position: absolute;top:0;left:0;width: 100%;height: 100%;z-index: 10;background: url(http://eventimg.auction.co.kr/md/auction/09AC91DA4E/w_bg_soldout1.png) repeat}
+		#goods_slide_c1_list .cnt .ico_soldout span{text-indent: -9999em;display: block;width: 100%;height: 100%;background: url(http://eventimg.auction.co.kr/md/auction/09AC91DA4E/w_ico_soldout.png) no-repeat 50% 50%}       
+        #goods_slide_c1_list .swiper-button-prev{width:67px;height:116px;position:absolute;top:295px;margin-top:-99px;left:0;background:url(../images/left_arr.png) no-repeat 0 0;z-index:100;cursor:pointer}
+        #goods_slide_c1_list .swiper-button-next{width:67px;height:116px;position:absolute;top:295px;margin-top:-99px;right:0;background:url(../images/right_arr.png) no-repeat 0 0;z-index:100;cursor:pointer
+	</style>
+	<script type="text/javascript" src="http://script.auction.co.kr/common/jquery.js"></script>	
+	<script src="http://eventimg.auction.co.kr/md/auction/08405BF42E/idangerous.swiper.js"></script>
+	<script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/07C0B575AE/qa_resizeFrame.js"></script>	
+	<script>
+        
+        //document.domain = "auction.co.kr"
+
+        function thisHide(){
+            //해당 영역을 제거하는함수
+            parent.special_hide();
+        }
+        
+    </script>
+</head>
+<body>
+    
+    <!--한정수량 매진시 thisHide() < -- 함수 실행 -->
+
+    <img src="../images/luckbox_tit.gif" alt="리미티드 에디션 LUCKY BOX">
+    
+	<div id="goods_slide_c1_list">
+	
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<!-- loop -->												
+				<div class="swiper-slide"><img src="../images/special_img_01.jpg" alt=""></div>						
+				<div class="swiper-slide"><img src="../images/special_img_02.jpg" alt=""></div>						
+				<div class="swiper-slide"><img src="../images/special_img_03.jpg" alt=""></div>						
+				<div class="swiper-slide"><img src="../images/special_img_04.jpg" alt=""></div>				
+			</div>
+			
+			
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+			<div class="cnt">				
+				<!-- 상품명 가격 -->
+                <div class="price"><img src="../images/special_info.gif" alt=""></div>
+				<!-- 구매하기 -->
+				<a href="javascript:layPopShow(0);"><img src="../images/btn_buy.gif" alt="구매하기"></a>
+			</div>
+		</div>				
+		<script>
+			var mySwiper = new Swiper('#goods_slide_c1_list .swiper-container', {
+				simulateTouch:true,
+				pagination:'#goods_slide_c1_list .swiper-pagination',
+				paginationClickable:true,
+				autoplay : 4500,
+				loop:true,
+				calculateHeight:true,
+				autoplayDisableOnInteraction : true
+			});
+            $('#goods_slide_c1_list .swiper-button-prev').bind('click', function(e){
+                e.preventDefault();
+                mySwiper.stopAutoplay();
+                mySwiper.swipePrev();
+                mySwiper.startAutoplay();
+            });
+            $('#goods_slide_c1_list .swiper-button-next').bind('click', function(e){
+                e.preventDefault();
+                mySwiper.stopAutoplay();
+                mySwiper.swipeNext();
+                mySwiper.startAutoplay();
+            });
+		</script>
+	</div>
+</body>
+</html>

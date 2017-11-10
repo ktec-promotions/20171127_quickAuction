@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>    
+        <title>옥션단독 special price</title>        
+        <link rel="stylesheet" href="http://eventimg.auction.co.kr/md/auction/0973EFE7D0/m_goods.css">	
+        <style>
+            *{padding: 0; margin:0; border: 0;}
+            a{text-decoration: none;color:inherit}        
+            ul,ol,li{list-style: none}
+            img{border:0; vertical-align: top; width:100%;}
+
+            #p_wrapper{background-color: #ffffff; padding-bottom: 8%;}
+            #p_goods{position: relative;text-align:center;line-height: 0; margin-left: 2%; width:96%; background-color: #fff; border:1px solid #dfdfe1;}
+            #p_goods img{width: 100%;}   
+            #p_goods .prd_img{position: relative; width:100%;}
+            #p_goods .cnt{position: relative;width: 100%;}
+            #p_goods .cnt > a.btn_buy{width:49.342%;display: inline-block}
+            #p_goods .ico_soldout{position: absolute;top:0;left:0;width: 100%;height: 100%;background: url(../images/w_ico_soldout.png) no-repeat 50% 50%;background-size:30% auto}
+           
+            
+            #goods_schedule{position: relative;text-align:center;line-height: 0; margin-top:5%; border-top:1px solid #dfdfe1}
+            #goods_schedule ul{width: 100%;overflow: hidden;}
+            #goods_schedule ul li{width: 25%;float:left;position: relative}
+            #goods_schedule ul li .inner{border-left:1px solid #e5e5e5;padding:6% 8%}
+            #goods_schedule ul li .date{height: 20px;line-height: 20px;text-align: center;color:#fff;background: #676767;font-size:12px;font-weight:bold}
+            /* 2017.08.25 색상수정	*/        
+            #goods_schedule ul li.today .date{background: #6e4046}
+            /* // */
+            #goods_schedule ul li:nth-child(1) .inner{border-color:#fff}
+            #goods_schedule img{width: 100%;}
+            #goods_schedule ul li .cnt{position: relative}
+            #goods_schedule ul li .cnt .ico_soldout{position:absolute;top:0;left:0;width: 100%;height: 100%;background: url(http://eventimg.auction.co.kr/md/auction/09AC91DA4E/w_bg_thumb_soldout.png) no-repeat 50% 50%;background-size:100% auto}
+            #goods_schedule ul li .cnt .ico_finished{position:absolute;top:0;left:0;width: 100%;height: 100%;background: url(http://eventimg.auction.co.kr/md/auction/09AC91DA4E/w_bg_thumb_end.png) no-repeat 50% 50%;background-size:100% auto}
+        </style>
+        <script type="text/javascript" src="http://script.auction.co.kr/common/jquery.js"></script>        
+        <script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/07C0B575AE/qa_resizeFrame.js"></script>
+        <script>
+            //document.domain = "auction.co.kr"
+
+            function layPopShow(num){
+                var sizeW,
+                    sizeH;
+                $("#layerWrap2", parent.document).show();
+
+                if (num == 0){              
+                    sizeW = 508/1.6;
+                    sizeH = 652/1.6;
+                    // 대상자가 아닙니다
+                    $("#layerWrap2",parent.document).append('<div id="layerPopCouponType"><a href="javascript:;" onclick="layPopHide()"><img width="'+sizeW+'" height="'+sizeH+'" src="images/special_pop_01.jpg" /></a></div>');
+                    $("#layerPopCouponType",parent.document).css("margin-left" ,(-1*(sizeW/2))+"px");
+                    $("#layerPopCouponType",parent.document).css("margin-top" ,(-1*(sizeH/2))+"px");
+                }else if(num == 1){
+                    sizeW = 508/1.6;
+                    sizeH = 652/1.6;
+                    // 10시부터 구매 가능
+                    $("#layerWrap2",parent.document).append('<div id="layerPopCouponType"><a href="javascript:;" onclick="layPopHide()"><img width="'+sizeW+'" height="'+sizeH+'" src="images/special_pop_02.jpg" /></a></div>');
+                    $("#layerPopCouponType",parent.document).css("margin-left" ,(-1*(sizeW/2))+"px");
+                    $("#layerPopCouponType",parent.document).css("margin-top" ,(-1*(sizeH/2))+"px");
+                } 
+            }
+   
+        </script>
+    </head>
+    <body>
+        
+
+
+        <div id="p_wrapper">        
+            <img src="../images/m_spceial_price_tit.gif" alt="옥션 단독 spceial price">
+
+            <div id="p_goods">
+                <div class="prd_img">
+                    <!-- soldout 일때-->
+                    <div class="ico_soldout"></div>
+                    
+                    <img src="../images/m_special_price_prd_01.jpg" alt="오늘의 상품">
+                </div>
+                <div class="cnt">
+                    
+                    <!-- 상품명 가격 -->
+                    <div class="price"><img src="../images/m_special_price_prd_01_info.gif" alt=""></div>
+                    <!-- 구매하기 -->
+                    <a href="javascript:layPopShow(1);" class="btn_buy"><img src="../images/w_btn_buy.gif" alt="구매하기"></a>
+                </div>
+                
+                
+                <div id="goods_schedule">
+                    <ul>
+                        <li class="today">
+                            <div class="inner">
+                                <div class="date">11월 27일</div>
+                                <div class="cnt">
+                                    <!-- finished -->
+                                    <div class="ico_finished"></div>
+                                    <!-- // -->
+                                    <img src="../images/m_special_price_prd_thum.jpg" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inner">
+                                <div class="date">11월 28일</div>
+                                <div class="cnt">
+                                    <!-- soldout -->
+                                    <div class="ico_soldout"></div>
+                                    <!-- // -->
+                                    <img src="../images/m_special_price_prd_thum.jpg" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inner">
+                                <div class="date">11월 29일</div>
+                                <div class="cnt">
+                                    <img src="../images/m_special_price_prd_thum.jpg" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inner">
+                                <div class="date">11월 30일</div>
+                                <div class="cnt">
+                                    <img src="../images/m_special_price_prd_thum.jpg" alt="">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>	
+            </div>
+        </div>
+    </body>
+</html>

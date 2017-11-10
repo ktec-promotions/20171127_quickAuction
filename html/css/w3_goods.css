@@ -1,0 +1,46 @@
+#goods_c3_list .goods_area li {
+
+    width: 318px !important;
+    position: relative;
+    background: #fff;
+    letter-spacing: -1px;
+    overflow: hidden;
+    float: left;
+    border: 1px #e6e6e6 solid;
+    margin: 6px;
+
+}
+#goods_c3_list .goods_area .goods_cnt {
+
+    position: relative;
+    padding: 20px 43px 10px 43px !important;
+    min-height: 105px;
+    overflow: hidden;
+
+
+}
+#goods_c3_list .goods_area .goods_name{height:48px;margin-bottom:12px;overflow: hidden; text-align: left}
+#goods_c3_list .goods_area .goods_name p{font-weight: bold;font-size:21px;color:#333333;line-height:24px;  width:227px; text-align: center}
+#goods_c3_list .goods_area .goods_price{height:55px;}
+#goods_c3_list .goods_area .goods_price .list_price{color:#666666}
+#goods_c3_list .goods_area .goods_price .list_price{font-size:16px}
+#goods_c3_list .goods_area .goods_price .list_price del{font-size:18px}
+#goods_c3_list .goods_area .goods_price .list_price del{top:1px}
+#goods_c3_list .goods_area .goods_price .deal_price{color:#eb1d24;font-size:16px}
+
+.btns{position: relative; width:100%; display: block}
+.btns img{position: relative; width:230px !important; height:50px; padding: 0 0 30px 44px;}
+
+.list_price{position: relative; width:100%; display: block; color:#171717; overflow: hidden;  padding-bottom: 10px !important}
+.list_price span{float: left; overflow: hidden}
+.list_price .p_tit{text-align: left; width:30%; display: block; overflow: hidden; font-size: 18px; line-height: 24px;letter-spacing: -2px;color:#171717;}
+.list_price .p_price{text-align: right; width:69%; display: block; font-size: 18px; line-height: 24px;color:#171717;}
+.list_price .p_price del{font-size: 22px !important; line-height: 24px;color:#171717;}
+
+.deal_price{position: relative; width:100%; display: block;overflow: hidden; color:#ec3239;}
+.deal_price span{float: left; overflow: hidden}
+.deal_price .p_tit{text-align: left; width:45%; display: block; overflow: hidden; font-size: 18px; line-height: 30px; letter-spacing: -2px;color:#ec3239;}
+.deal_price .p_price{text-align: right; width:54%; display: block; font-size: 18px; line-height: 24px;color:#ec3239;}
+.deal_price .p_price strong{font-size: 25px !important; line-height: 30px;color:#ec3239;}
+
+
