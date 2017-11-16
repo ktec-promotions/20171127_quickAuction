@@ -12,7 +12,8 @@
 #goods_c1_list .goods_area .goods_cnt .btns img{position: relative; width:240px;}
 
 #goods_c1_list .goods_area .goods_cnt .goods_name{ padding-bottom: 0%; width:100%;text-align:center; line-height:0.45em; color:#454545; font-size:1.6em;overflow:hidden; word-break:break-all; white-space:nowrap;/* text-overflow:ellipsis;*/ letter-spacing:-0.5px;}
-#goods_c1_list .goods_area .goods_cnt .goods_name strong{color:#454545; font-weight:bold; font-size:0.5em;  overflow:hidden; word-break:break-all; white-space:nowrap; text-overflow:ellipsis;}
+#goods_c1_list .goods_area .goods_cnt .goods_name strong{color:#454545; font-weight:bold; font-size:0.5em; padding-top:0.3em; padding-bottom: 0.3em;  overflow:hidden; word-break:break-all; white-space:nowrap; text-overflow:ellipsis; display: block; width:100%;}
+#goods_c1_list .goods_area .goods_cnt .goods_name .sub_tit{color:#454545; font-weight:bold; font-size:0.5em; padding-bottom: 0.3em;  overflow:hidden; word-break:break-all; white-space:nowrap; text-overflow:ellipsis; display: block; width:100%;}
 
 #goods_c1_list .goods_area .goods_cnt .goods_price{padding-top:8%; width:73%;position:relative;text-align:center; letter-spacing:-0.5px; margin: 0 auto;}
 #goods_c1_list .goods_area .goods_cnt .goods_price .list_price{ color:#171717; font-size:0.85em;text-align: right;}            
@@ -23,7 +24,7 @@
 
 #goods_c1_list .goods_area .goods_cnt .goods_price .deal_price{  padding-top:0px; position: relative; width: 100%; color:#ed4e53; display: inline-block !important; line-height:0.85em; font-size:0.8em;text-align: right; }
 #goods_c1_list .goods_area .goods_cnt .goods_price .deal_price div{float: left;}       
-#goods_c1_list .goods_area .goods_cnt .goods_price .deal_price .p_tit{ position: relative; width: 50%; color:#ed4e53;   font-size:0.85em;text-align: left;letter-spacing: -2px}
+#goods_c1_list .goods_area .goods_cnt .goods_price .deal_price .p_tit{ position: relative; width: 50%; color:#ed4e53;   font-size:0.85em;text-align: left;letter-spacing: -1px}
 #goods_c1_list .goods_area .goods_cnt .goods_price .deal_price .p_price{padding-top:0px; position: relative; width: 50%; color:#ed4e53;  font-size:0.85em;text-align: right}
 #goods_c1_list .goods_area .goods_cnt .goods_price .deal_price .p_price strong{ position: relative; width: 50%; color:#ed4e53;  font-weight:bold !important;font-size:1.1em !important;text-align: right}
 
@@ -100,4 +101,19 @@
     text-overflow: ellipsis !important;
     letter-spacing: -0.5px !important;
     text-align: center !important;
+}
+
+
+
+#goods_c1_black_list .goods_area .goods_cnt .goods_name strong {
+    color: #000000;
+    line-height: 28px;
+    font-weight: bold;
+    font-size: 18px;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    text-overflow:ellipsis;
 }

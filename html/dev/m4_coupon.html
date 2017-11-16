@@ -12,10 +12,10 @@
         #p_coupon .btn_coupon{display: inline-block;width: 46.875%;}
     </style>
     <script type="text/javascript" src="http://script.auction.co.kr/common/jquery.js"></script>
-    <script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/07C0B575AE/qa_resizeFrame.js"></script>
+    <script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/07C0B575AE/resizeFrame.js"></script>
     <script>
         
-        //document.domain="auction.co.kr"
+        document.domain="auction.co.kr"
         
         
         // 부모창에 팝업 이미지를 띄워주는 함수
@@ -28,14 +28,14 @@
                 sizeW = 508/1.6;
                 sizeH = 652/1.6;
                 // 10% 할인 쿠폰을 받으셨습니다
-                $("#layerWrap2",parent.document).append('<div id="layerPopCouponType"><a href="javascript:;" onclick="layPopHide()"><img width="'+sizeW+'" height="'+sizeH+'" src="images/coupon_pop_01.jpg" /></a></div>');
+                $("#layerWrap2",parent.document).append('<div id="layerPopCouponType"><a href="javascript:;" onclick="layPopHide()"><img width="'+sizeW+'" height="'+sizeH+'" src="http://eventimg.auction.co.kr/md/auction/09E31325D2/coupon_pop_01.jpg" /></a></div>');
                 $("#layerPopCouponType",parent.document).css("margin-left" ,(-1*(sizeW/2))+"px");
                 $("#layerPopCouponType",parent.document).css("margin-top" ,(-1*(sizeH/2))+"px");
             } else if (num == 1){
                 sizeW = 508/1.6;
                 sizeH = 652/1.6;
                 // 이미 받으셨습니다.
-                $("#layerWrap2",parent.document).append('<div id="layerPopCouponType"><a href="javascript:;" onclick="layPopHide()"><img width="'+sizeW+'" height="'+sizeH+'" src="images/coupon_pop_02.jpg" /></a></div>');
+                $("#layerWrap2",parent.document).append('<div id="layerPopCouponType"><a href="javascript:;" onclick="layPopHide()"><img width="'+sizeW+'" height="'+sizeH+'" src="http://eventimg.auction.co.kr/md/auction/09E31325D2/coupon_pop_02.jpg" /></a></div>');
                 $("#layerPopCouponType",parent.document).css("margin-left" ,(-1*(sizeW/2))+"px");
                 $("#layerPopCouponType",parent.document).css("margin-top" ,(-1*(sizeH/2))+"px");
             }
@@ -44,7 +44,7 @@
 </head>
 <body>
     <div id="p_coupon">
-        <a href="javascript:layPopShow(0)" class="btn_coupon"><img src="../images/m_btn_coupon.gif" alt="쿠폰받기"></a>
+        <a href="javascript:layPopShow(0)" class="btn_coupon"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_btn_coupon.gif" alt="쿠폰받기"></a>
     </div>
 </body>
 </html>

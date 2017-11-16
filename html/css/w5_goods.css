@@ -1,0 +1,40 @@
+
+#goods_c2_black_list .goods_area .goods_cnt .goods_price th {
+    width: 28% !important;
+    text-align: right;
+}
+#goods_c2_black_list .goods_area .goods_cnt {
+    position: relative;
+    padding: 30px 15px 15px 15px !important;
+    min-height: 45px;
+    overflow: hidden;
+    height: 240px !important;
+}
+#goods_c2_black_list .goods_area .goods_cnt .goods_name {
+    padding: 0 5%;
+    height: 80px !important;
+    line-height: 30px;
+    text-align: center;
+    color: #252525;
+}
+#goods_c2_black_list .goods_area .goods_cnt .goods_name strong {
+    font-size: 26px;
+    height: 71px;
+    overflow: hidden;
+    display: inline-block;
+    font-weight: bold;
+}
+.btnCase{position: relative; display: block; padding:30px 0; width:100%; text-align: center}
+
+
+#goods_c2_black_list .goods_area .goods_cnt .goods_name strong {
+    font-size: 26px;
+    height: 35px;
+    overflow: hidden;
+    display: inline-block;
+    font-weight: bold;
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}

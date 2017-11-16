@@ -44,3 +44,33 @@
 .deal_price .p_price strong{font-size: 25px !important; line-height: 30px;color:#ec3239;}
 
 
+#goods_c3_list .goods_area .goods_name p {
+    font-weight: bold;
+    font-size: 21px;
+    color: #333333;
+    line-height: 24px;
+    width: 227px;
+    text-align: center;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+}
+
+#goods_c3_list .goods_area .goods_name p {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333333;
+    line-height: 24px;
+    width: 227px;
+    text-align: center;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+
+

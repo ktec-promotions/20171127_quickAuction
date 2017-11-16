@@ -18,7 +18,7 @@
             #p_goods .prd_img{position: relative; width:100%;}
             #p_goods .cnt{position: relative;width: 100%;}
             #p_goods .cnt > a.btn_buy{width:49.342%;display: inline-block}
-            #p_goods .ico_soldout{position: absolute;top:0;left:0;width: 100%;height: 100%;background: url(../images/w_ico_soldout.png) no-repeat 50% 50%;background-size:30% auto}
+            #p_goods .ico_soldout{position: absolute;top:0;left:0;width: 100%;height: 100%;background: url(http://eventimg.auction.co.kr/md/auction/09E31325D2/w_ico_soldout.png) no-repeat 50% 50%;background-size:30% auto}
            
             
             #goods_schedule{position: relative;text-align:center;line-height: 0; margin-top:5%; border-top:1px solid #dfdfe1}
@@ -36,9 +36,9 @@
             #goods_schedule ul li .cnt .ico_finished{position:absolute;top:0;left:0;width: 100%;height: 100%;background: url(http://eventimg.auction.co.kr/md/auction/09AC91DA4E/w_bg_thumb_end.png) no-repeat 50% 50%;background-size:100% auto}
         </style>
         <script type="text/javascript" src="http://script.auction.co.kr/common/jquery.js"></script>        
-        <script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/07C0B575AE/qa_resizeFrame.js"></script>
+        <script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/07C0B575AE/resizeFrame.js"></script>
         <script>
-            //document.domain = "auction.co.kr"
+            document.domain = "auction.co.kr"
 
             function layPopShow(num){
                 var sizeW,
@@ -49,14 +49,14 @@
                     sizeW = 508/1.6;
                     sizeH = 652/1.6;
                     // 대상자가 아닙니다
-                    $("#layerWrap2",parent.document).append('<div id="layerPopCouponType"><a href="javascript:;" onclick="layPopHide()"><img width="'+sizeW+'" height="'+sizeH+'" src="images/special_pop_01.jpg" /></a></div>');
+                    $("#layerWrap2",parent.document).append('<div id="layerPopCouponType"><a href="javascript:;" onclick="layPopHide()"><img width="'+sizeW+'" height="'+sizeH+'" src="http://eventimg.auction.co.kr/md/auction/09E31325D2/special_pop_01.jpg" /></a></div>');
                     $("#layerPopCouponType",parent.document).css("margin-left" ,(-1*(sizeW/2))+"px");
                     $("#layerPopCouponType",parent.document).css("margin-top" ,(-1*(sizeH/2))+"px");
                 }else if(num == 1){
                     sizeW = 508/1.6;
                     sizeH = 652/1.6;
                     // 10시부터 구매 가능
-                    $("#layerWrap2",parent.document).append('<div id="layerPopCouponType"><a href="javascript:;" onclick="layPopHide()"><img width="'+sizeW+'" height="'+sizeH+'" src="images/special_pop_02.jpg" /></a></div>');
+                    $("#layerWrap2",parent.document).append('<div id="layerPopCouponType"><a href="javascript:;" onclick="layPopHide()"><img width="'+sizeW+'" height="'+sizeH+'" src="http://eventimg.auction.co.kr/md/auction/09E31325D2/special_pop_02.jpg" /></a></div>');
                     $("#layerPopCouponType",parent.document).css("margin-left" ,(-1*(sizeW/2))+"px");
                     $("#layerPopCouponType",parent.document).css("margin-top" ,(-1*(sizeH/2))+"px");
                 } 
@@ -69,21 +69,21 @@
 
 
         <div id="p_wrapper">        
-            <img src="../images/m_spceial_price_tit.gif" alt="옥션 단독 spceial price">
+            <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_spceial_price_tit.gif" alt="옥션 단독 spceial price">
 
             <div id="p_goods">
                 <div class="prd_img">
                     <!-- soldout 일때-->
                     <div class="ico_soldout"></div>
                     
-                    <img src="../images/m_special_price_prd_01.jpg" alt="오늘의 상품">
+                    <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_special_price_prd_01.jpg" alt="오늘의 상품">
                 </div>
                 <div class="cnt">
                     
                     <!-- 상품명 가격 -->
-                    <div class="price"><img src="../images/m_special_price_prd_01_info.gif" alt=""></div>
+                    <div class="price"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_special_price_prd_01_info.gif" alt=""></div>
                     <!-- 구매하기 -->
-                    <a href="javascript:layPopShow(1);" class="btn_buy"><img src="../images/w_btn_buy.gif" alt="구매하기"></a>
+                    <a href="javascript:layPopShow(1);" class="btn_buy"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/w_btn_buy.gif" alt="구매하기"></a>
                 </div>
                 
                 
@@ -96,7 +96,7 @@
                                     <!-- finished -->
                                     <div class="ico_finished"></div>
                                     <!-- // -->
-                                    <img src="../images/m_special_price_prd_thum.jpg" alt="">
+                                    <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_special_price_prd_thum.jpg" alt="">
                                 </div>
                             </div>
                         </li>
@@ -107,7 +107,7 @@
                                     <!-- soldout -->
                                     <div class="ico_soldout"></div>
                                     <!-- // -->
-                                    <img src="../images/m_special_price_prd_thum.jpg" alt="">
+                                    <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_special_price_prd_thum.jpg" alt="">
                                 </div>
                             </div>
                         </li>
@@ -115,7 +115,7 @@
                             <div class="inner">
                                 <div class="date">11월 29일</div>
                                 <div class="cnt">
-                                    <img src="../images/m_special_price_prd_thum.jpg" alt="">
+                                    <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_special_price_prd_thum.jpg" alt="">
                                 </div>
                             </div>
                         </li>
@@ -123,7 +123,7 @@
                             <div class="inner">
                                 <div class="date">11월 30일</div>
                                 <div class="cnt">
-                                    <img src="../images/m_special_price_prd_thum.jpg" alt="">
+                                    <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_special_price_prd_thum.jpg" alt="">
                                 </div>
                             </div>
                         </li>
