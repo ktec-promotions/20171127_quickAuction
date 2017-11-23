@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>옥션 - 모바일 쇼핑은 옥션</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	
+	<!-- Custom CSS -->
+	<style type="text/css">
+        *{padding: 0; margin: 0; border:0;}
+        #p_wrapper{position: relative; width:100%; }
+        #p_wrapper img{vertical-align: top; line-height: 0;}
+    
+        .btn{position: absolute; left:311px; top:260px;z-index: 100}
+        .soldout{position: absolute; left:395px; top:87px; z-index: 200}
+    </style>
+	<!-- jQuery -->
+	<script type="text/javascript" src="http://script.auction.co.kr/common/jquery.js"></script>
+    
+	<!-- Common Promotion Script -->
+    <script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/07C0B575AE/resizeFrame.js"></script>
+	<!-- Custom Script -->
+	
+    <script>
+        document.domain = "auction.co.kr"
+
+        function layPopShow(){
+            var sizeW,
+                sizeH;
+            $("#layerWrap2", parent.document).show();
+
+          
+            sizeW = 508;
+            sizeH = 652;
+            // 10시부터 구매 가능
+            $("#layerWrap2",parent.document).append('<div id="layerPopCouponType"><a href="javascript:;" onclick="layPopHide()"><img width="'+sizeW+'" height="'+sizeH+'" src="http://eventimg.auction.co.kr/md/auction/09E31325D2/special_pop_02.jpg" /></a></div>');
+            $("#layerPopCouponType",parent.document).css("margin-left" ,(-1*(sizeW/2))+"px");
+            $("#layerPopCouponType",parent.document).css("margin-top" ,(-1*(sizeH/2))+"px");
+           
+        }
+
+    </script>
+</head>
+<body>
+
+	
+
+	<div id="p_wrapper">
+	    <!--솔드아웃시
+	    <div class="soldout">
+            <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/exp_soldout.png" alt="">
+	    </div>
+-->
+		<img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/exp_prd_info.gif" alt="상품가격정보">
+		
+		
+        <a class="btn" href="javascript:layPopShow()"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/exp_buy_btn.jpg" alt="구매하기"></a>
+		
+	</div>
+	
+</body>
+</html>

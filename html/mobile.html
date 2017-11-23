@@ -16,7 +16,7 @@
         #p_wrapper{min-width: 320px;}
              
         #p_header{position: relative; width:100%; }        
-        #p_header #p_share{top:2%; z-index: 20} 
+        #p_header #p_share{top:2%; z-index: 999} 
         #p_header .copy_area{position: absolute; z-index: 10}
         #p_header .imgInfinitePlay{width:100%;position: absolute;left:0;bottom:0;height: 15%;}
         #p_header .imgInfinitePlay ul{width: 100%;position: relative;height:100%;}
@@ -37,7 +37,7 @@
         #p_sec0 .swiper-pagination-bullet-active{border:2px #faefef solid;opacity:0.8;background:#faefef;/*animation: yoyo 0.8s infinite;*/}
         #p_sec0 .swiper-button-prev{display:none; opacity:0.3;width:40px;height:40px;z-index:10;top:50%;background-color:#fff;background-size:30px 20px;margin-top:-20px;left:0}
         #p_sec0 .swiper-button-next{display:none; opacity:0.3;width:40px;height:40px;z-index:10;top:50%;background-color:#fff;background-size:30px 20px;margin-top:-20px;right:0}
-        
+        #p_sec4{background-color: #d93f37; padding-bottom: 5%;}
         @keyframes example {
             0%   {border:2px #fff solid; width:6px; height:6px;}           
             50%  {border:5px #fff solid; width:10px; height:10px;margin-bottom:-4px;}
@@ -64,6 +64,11 @@
         }
         #coupon_btn{position: absolute; left:0%; top:75%; width:100%;}
         .coupon_down_arr{position: absolute;left: 68%;top: 57%;width: 13%;height: 13%;}
+        
+        .light{position: absolute; z-index: 500; top:4%; left:-50%;z-index: 55; width:30% !important}
+        .visual_mask{position: absolute; left:0%; top:0%; width:100%; z-index: 66}
+        
+        .content{position: relative; width:96%; margin-left:2%;}
 	</style>
 	<!-- jQuery -->
 	<script type="text/javascript" src="http://script.auction.co.kr/common/jquery.js"></script>
@@ -137,6 +142,13 @@
 
 	<div role="main" id="p_wrapper">
 		<div id="p_header">
+           
+            <img class="visual_mask" src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_visual_mask.png" alt="">
+            <img class="light" src= "http://eventimg.auction.co.kr/md/auction/09E31325D2/light.png" alt="">
+           
+           
+           
+           
             <div class="copy_area">
                 <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_top_copy.png" alt="">
             </div>   
@@ -215,6 +227,8 @@
                     <a href="javascript:notice_off('.notice_box')"><img class="btn_on" src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_exp_benefit_notice_on.gif"></a>
                     <p class="msg"><img  src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_exp_benefit_notice_img.gif"></p>
                 </div>
+                
+                <a href="http://mmya.auction.co.kr/Listing/#/list?category=18620000" target="_parent"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_add_link.jpg" alt=""></a>
             </div>
             <!-- //특급혜택 -->
             
@@ -244,8 +258,19 @@
             <!-- 체험특가 -->
             <div id="p_sec4" class="rel">                
                 <h3><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_title_05.jpg" alt="체험특가"></h3>
-                <div style="height:500px; width:100%; background-color: red;">
-                            
+                <!--1-->
+                <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_exp_sub_tit01.jpg" alt="">
+                <div class="content">
+                    <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_exp_prd_img01.jpg" alt="">
+                    <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_exp_prd_calum01.jpg" alt="">
+                    <iframe id="prd05" src="about:blank"  width="100%"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                </div>
+                <!--2-->
+                <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_exp_sub_tit02.jpg" alt="">
+                <div class="content">
+                    <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_exp_prd_img02.jpg" alt="">
+                    <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_exp_prd_calum02.jpg" alt="">
+                    <iframe id="prd06" src="about:blank"  width="100%"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
                 </div>
             </div>
             <!-- //체험특가 -->
@@ -254,11 +279,31 @@
             <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_promotion_after_banner.jpg" alt="차주 예고">
         </div>
     </div>
+    
+    <script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/04D25F0304/TweenLite.min.js"></script>
+    <script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/04D25F0304/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/04D25F0304/EasePack.min.js"></script>
+    <script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/04D25F0304/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/04D25F0304/TweenMax.min.js"></script>
+    <script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/04D25F0304/BezierPlugin.min.js"></script>
     <script>
+        
+        
+        $(window).load(function(){
+            var motionType1 = Power3.easeOut;       
+            var backGroundMotion = new TimelineLite();
+            var backgroundElement = $(".light")          
+            backGroundMotion.add( TweenLite.to(backgroundElement, 3, {left:'57%', ease:motionType1, onComplete:function(){            
+                backGroundMotion.restart()
+            }}) );   
+        })    
+        
+        
+        
         /*sns*/
         $("#dev_sns").attr("src" , "http://eventimg.auction.co.kr/md/auction/09E31325D2/m0_sns.html")
         /*리미티드에디션*/
-        $("#prd01").attr("src" , "http://eventimg.auction.co.kr/md/auction/09E31325D2/m1_goods_rolling.html")
+        $("#prd01").attr("src" , "http://eventimg.auction.co.kr/md/auction/09E31325D2/m1_goods_rolling.html?ver=1123")
         /*옥션단독스페셜 PRICE*/
         $("#prd02").attr("src" , "http://eventimg.auction.co.kr/md/auction/09E31325D2/m2_goods.html?ver=1118")
         /*추천 TODAY'S PICK*/
@@ -267,6 +312,10 @@
         $("#coupon_btn").attr("src" , "http://eventimg.auction.co.kr/md/auction/09E31325D2/m4_coupon.html?ver=11")        
         /*맞춤특가*/
         $("#prd04").attr("src" , "http://eventimg.auction.co.kr/md/auction/09E31325D2/m5_goods.html?ver=1118")
+        
+        /*체험*/
+        $("#prd05").attr("src" , "http://eventimg.auction.co.kr/md/auction/09E31325D2/m6_prd.html")
+        $("#prd06").attr("src" , "http://eventimg.auction.co.kr/md/auction/09E31325D2/m7_prd_list.html")
         
         var mySwiper = new Swiper('#p_sec0 .swiper-container', {				
            /* autoplay : false,

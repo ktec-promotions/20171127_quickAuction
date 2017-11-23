@@ -8,14 +8,23 @@
 	<link rel="stylesheet" type="text/css" href="http://eventimg.auction.co.kr/md/auction/0973EFE7D0/goods.css" />	
 	<style>
 		#goods_slide_c1_list{width: 978px;border:1px solid #dfdfe1;position: relative; background-color: #fff}		
-		#goods_slide_c1_list .swiper-pagination{position: relative;bottom:auto;width: 100%;padding-top:30px}
-        #goods_slide_c1_list .swiper-pagination span{width:8px;height:8px;display:inline-block;border:2px solid #bababa;background: #bababa;margin:0 9px;}
-        #goods_slide_c1_list .swiper-pagination .swiper-active-switch{background: #1b1b1b; border:2px solid #1b1b1b;}
+        #goods_slide_c1_list .top_roll .swiper-pagination{    position: absolute;bottom: 30px;width: 100%;z-index: 100;}
+        #goods_slide_c1_list .top_roll .swiper-pagination span{width:8px;height:8px;display:inline-block;border:2px solid #bababa;background: #bababa;margin:0 9px;}
+        #goods_slide_c1_list .top_roll .swiper-pagination .swiper-active-switch{background: #1b1b1b; border:2px solid #1b1b1b;}
+        #goods_slide_c1_list .top_roll .swiper-button-prev{width:67px;height:116px;position:absolute;top:295px;margin-top:-99px;left:0;background:url(http://eventimg.auction.co.kr/md/auction/09E31325D2/left_arr.png) no-repeat 0 0;z-index:100;cursor:pointer}
+        #goods_slide_c1_list .top_roll .swiper-button-next{width:67px;height:116px;position:absolute;top:295px;margin-top:-99px;right:0;background:url(http://eventimg.auction.co.kr/md/auction/09E31325D2/right_arr.png) no-repeat 0 0;z-index:100;cursor:pointer}
+        
 		#goods_slide_c1_list .cnt{text-align: center;position: relative;padding-bottom:40px}
 		#goods_slide_c1_list .cnt .ico_soldout{position: absolute;top:0;left:0;width: 100%;height: 100%;z-index: 10;background: url(http://eventimg.auction.co.kr/md/auction/09AC91DA4E/w_bg_soldout1.png) repeat}
 		#goods_slide_c1_list .cnt .ico_soldout span{text-indent: -9999em;display: block;width: 100%;height: 100%;background: url(http://eventimg.auction.co.kr/md/auction/09AC91DA4E/w_ico_soldout.png) no-repeat 50% 50%}       
-        #goods_slide_c1_list .swiper-button-prev{width:67px;height:116px;position:absolute;top:295px;margin-top:-99px;left:0;background:url(http://eventimg.auction.co.kr/md/auction/09E31325D2/left_arr.png) no-repeat 0 0;z-index:100;cursor:pointer}
-        #goods_slide_c1_list .swiper-button-next{width:67px;height:116px;position:absolute;top:295px;margin-top:-99px;right:0;background:url(http://eventimg.auction.co.kr/md/auction/09E31325D2/right_arr.png) no-repeat 0 0;z-index:100;cursor:pointer
+        
+        
+        #goods_slide_c1_list .price .swiper-pagination{position: relative;bottom:auto;width: 100%;padding:17px 0 }
+        #goods_slide_c1_list .price .swiper-pagination span{width:8px;height:8px;display:inline-block;border:2px solid #bababa;background: #bababa;margin:0 9px;}
+        #goods_slide_c1_list .price .swiper-pagination .swiper-active-switch{background: #1b1b1b; border:2px solid #1b1b1b;}
+        #goods_slide_c1_list .price .swiper-button-prev{display:none; width:67px;height:116px;position:absolute;top:295px;margin-top:-99px;left:0;background:url(http://eventimg.auction.co.kr/md/auction/09E31325D2/left_arr.png) no-repeat 0 0;z-index:100;cursor:pointer}
+        #goods_slide_c1_list .price .swiper-button-next{display:none; width:67px;height:116px;position:absolute;top:295px;margin-top:-99px;right:0;background:url(http://eventimg.auction.co.kr/md/auction/09E31325D2/right_arr.png) no-repeat 0 0;z-index:100;cursor:pointer}
+        .notice_add{padding: 10px 0 15px 0;}
 	</style>
 	<script type="text/javascript" src="http://script.auction.co.kr/common/jquery.js"></script>	
 	<script src="http://eventimg.auction.co.kr/md/auction/08405BF42E/idangerous.swiper.js"></script>
@@ -38,50 +47,87 @@
     <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/luckbox_tit.gif" alt="리미티드 에디션 LUCKY BOX">
     
 	<div id="goods_slide_c1_list">
-	
-		<div class="swiper-container">
-			<div class="swiper-wrapper">
-				<!-- loop -->												
-				<div class="swiper-slide"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/special_img_01.jpg" alt=""></div>						
-				<div class="swiper-slide"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/special_img_02.jpg" alt=""></div>						
-				<div class="swiper-slide"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/special_img_03.jpg" alt=""></div>						
-				<div class="swiper-slide"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/special_img_04.jpg" alt=""></div>				
-			</div>
-			
-			
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-			<!-- Add Pagination -->
-			<div class="swiper-pagination"></div>
-			<div class="cnt">				
-				<!-- 상품명 가격 -->
-                <div class="price"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/special_info.gif" alt=""></div>
-				<!-- 구매하기 -->
-				<a href="javascript:layPopShow(0);"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/btn_buy.gif" alt="구매하기"></a>
-			</div>
-		</div>				
+	    <div class="top_roll">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- loop -->												
+                    <div class="swiper-slide"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/special_img_01.jpg" alt=""></div>						
+                    <div class="swiper-slide"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/special_img_02.jpg" alt=""></div>						
+                    <div class="swiper-slide"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/special_img_03.jpg" alt=""></div>						
+                    <div class="swiper-slide"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/special_img_04.jpg" alt=""></div>				
+                    <div class="swiper-slide"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/special_img_05.jpg" alt=""></div>				
+                    <div class="swiper-slide"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/special_img_06.jpg" alt=""></div>				
+                </div>
+
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </div>
+        <div class="cnt">				
+            <!-- 상품명 가격 -->
+            <div class="price">
+               
+               
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- loop -->												
+                        <div class="swiper-slide"> <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/special_info_01.gif" alt=""></div>						
+                        <div class="swiper-slide"> <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/special_info_02.gif" alt=""></div>						                        		
+                    </div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>                    
+
+                </div>
+               
+                
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                
+                <p class="notice_add"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/special_add_notice.gif" alt=""></p>
+                
+                <!-- 구매하기 -->
+                <a href="javascript:layPopShow(0);"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/btn_buy.gif" alt="구매하기"></a>
+            </div>
+            
+        </div>				
 		<script>
-			var mySwiper = new Swiper('#goods_slide_c1_list .swiper-container', {
+            var mySwiper = new Swiper('.top_roll .swiper-container', {
 				simulateTouch:true,
-				pagination:'#goods_slide_c1_list .swiper-pagination',
+                pagination:'.top_roll .swiper-pagination',
 				paginationClickable:true,
-				autoplay : 4500,
+				autoplay : false,
 				loop:true,
 				calculateHeight:true,
 				autoplayDisableOnInteraction : true
 			});
-            $('#goods_slide_c1_list .swiper-button-prev').bind('click', function(e){
+            $('.top_roll .swiper-button-prev').bind('click', function(e){
                 e.preventDefault();
                 mySwiper.stopAutoplay();
                 mySwiper.swipePrev();
                 mySwiper.startAutoplay();
             });
-            $('#goods_slide_c1_list .swiper-button-next').bind('click', function(e){
+            $('.top_roll .swiper-button-next').bind('click', function(e){
                 e.preventDefault();
                 mySwiper.stopAutoplay();
                 mySwiper.swipeNext();
                 mySwiper.startAutoplay();
             });
+            
+            var mySwiper2 = new Swiper('.price .swiper-container', {
+                simulateTouch:true,
+                pagination:'.price .swiper-pagination',
+                paginationClickable:true,
+                autoplay : 5000,
+                loop:true,
+                calculateHeight:true,
+                autoplayDisableOnInteraction : true
+            });
+            
 		</script>
 	</div>
 </body>

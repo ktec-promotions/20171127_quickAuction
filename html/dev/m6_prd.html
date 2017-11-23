@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="euc-kr">
+	<title>옥션 - 모바일 쇼핑은 옥션</title>
+	<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1, user-scalable=no" />
+	<meta http-equiv="cleartype" content="on"/>
+	
+	<!-- Custom CSS -->
+	<style type="text/css">
+        *{padding: 0; margin: 0; border: 0;}	
+        .rel{position: relative; width:100%;}
+        #p_wrapper{position: relative; width:100%;}
+        #p_wrapper img{ vertical-align: top; line-height: 0; width:100%;}
+        .soldout{position: absolute; left:30%; top:11%; width:40%;}
+        .soldout img{width:100%;}
+	</style>
+	<!-- jQuery -->
+	<script type="text/javascript" src="http://script.auction.co.kr/common/jquery.js"></script>    
+	<!-- Common Promotion Script -->
+	
+    <script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/07C0B575AE/resizeFrame.js"></script>
+	<!-- Custom Script -->
+    <script>
+       document.domain = "auction.co.kr"
+
+        function layPopShow(){
+            var sizeW,
+                sizeH;
+            $("#layerWrap2", parent.document).show();
+
+            sizeW = 508/1.6;
+            sizeH = 652/1.6;
+            // 10시부터 구매 가능
+            $("#layerWrap2",parent.document).append('<div id="layerPopCouponType"><a href="javascript:;" onclick="layPopHide()"><img width="'+sizeW+'" height="'+sizeH+'" src="http://eventimg.auction.co.kr/md/auction/09E31325D2/special_pop_02.jpg" /></a></div>');
+            $("#layerPopCouponType",parent.document).css("margin-left" ,(-1*(sizeW/2))+"px");
+            $("#layerPopCouponType",parent.document).css("margin-top" ,(-1*(sizeH/2))+"px");
+        }
+
+    </script>
+</head>
+<body>
+
+
+	<div id="p_wrapper">
+        
+        <!--soldout
+        <div class="soldout">
+            <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/exp_soldout.png" alt="">
+</div>-->
+        
+        <img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_exp_prd_info.gif" alt="상품">
+        <a href="javascript:layPopShow()"><img src="http://eventimg.auction.co.kr/md/auction/09E31325D2/m_exp_buy_btn.jpg" alt="버튼"></a>
+        
+	</div>
+
+</body>
+</html>
